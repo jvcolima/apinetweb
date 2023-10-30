@@ -1,0 +1,86 @@
+﻿@model IEnumerable<JorgeVera.Models.User>
+
+@{
+    ViewBag.Title = "Usuarios";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Nuevo Usuario", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Area)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido_Paterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido_Materno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rol)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Area)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellido_Paterno)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellido_Materno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Edad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+
+
+
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.id }) |
+            @Html.ActionLink("Borrar", "Delete", new { id = item.id })
+        </td>
+    </tr>
+}
+
+</table>

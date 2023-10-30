@@ -1,0 +1,100 @@
+﻿@model JorgeVera.Models.User
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rol)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Rol)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoUsuario)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoUsuario)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Area)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Area)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombres)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido_Paterno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Apellido_Paterno)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido_Materno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Apellido_Materno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Edad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Regresar", "Index")
+</p>
